@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A486E05F-F562-4921-9FD8-398B0DCBCBF6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DOGAN.AmbarStokTakip.Entities</RootNamespace>
+    <AssemblyName>DOGAN.AmbarStokTakip.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Concrete\Alim.cs" />
+    <Compile Include="Concrete\AlimUrun.cs" />
+    <Compile Include="Concrete\Base\BaseEntity.cs" />
+    <Compile Include="Concrete\Birim.cs" />
+    <Compile Include="Concrete\CikisIase.cs" />
+    <Compile Include="Concrete\CikisIaseTabela.cs" />
+    <Compile Include="Concrete\CikisSarf.cs" />
+    <Compile Include="Concrete\Depo.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\AlimDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\AlimUrunDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\BirimDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\CikisIaseDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\CikisIaseTabelaDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\CikisSarfDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\FaturaDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\OdemeDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\OtomatikCikisDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\PersonelDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\TabelaDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\TelefonRehberDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\UrunKayitDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\YemekDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\AlimDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\AlimUrunDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\BirimDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\CikisIaseDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\CikisIaseTabelaDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\CikisSarfDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\DepoDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\DepoDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoCommand\UrunDtoAdd.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\FaturaDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\IaseDusDto.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\OdemeDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\OtomatikCikisDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\PersonelDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\SarfDusDto.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\TabelaDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\TelefonRehberDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\UrunDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\UrunKayitDtoSelect.cs" />
+    <Compile Include="Concrete\Dto\DtoQuery\YemekDtoSelect.cs" />
+    <Compile Include="Concrete\Fatura.cs" />
+    <Compile Include="Concrete\Odeme.cs" />
+    <Compile Include="Concrete\OtomatikCikis.cs" />
+    <Compile Include="Concrete\Personel.cs" />
+    <Compile Include="Concrete\Tabela.cs" />
+    <Compile Include="Concrete\TelefonRehber.cs" />
+    <Compile Include="Concrete\Urun.cs" />
+    <Compile Include="Concrete\UrunKayit.cs" />
+    <Compile Include="Concrete\Yemek.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DOGAN.AmbarStokTakip.Core\DOGAN.AmbarStokTakip.Core.csproj">
+      <Project>{F21CCB6A-C273-4871-8751-B56BA869B3BF}</Project>
+      <Name>DOGAN.AmbarStokTakip.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

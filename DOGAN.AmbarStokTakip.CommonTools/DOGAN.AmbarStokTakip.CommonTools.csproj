@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A7F3B42-7190-42F0-B0F3-41896F1FDA7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DOGAN.AmbarStokTakip.CommonTools</RootNamespace>
+    <AssemblyName>DOGAN.AmbarStokTakip.CommonTools</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=6.0.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.0.3\lib\net452\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.0.0\lib\net452\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.0.0.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.0.0\lib\net452\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorFunctions\ThemeColor.cs" />
+    <Compile Include="Converts\MoneyConvert.cs" />
+    <Compile Include="Document\Excel\depoUrunListe\DepoUrunListeDocumentCreate.cs" />
+    <Compile Include="Document\Excel\depoUrunListe\DtoDepoUrunListeDocument.cs" />
+    <Compile Include="Document\Excel\Iase\DtoIaseTabelaAksamDocument.cs" />
+    <Compile Include="Document\Excel\Iase\DtoIaseTabelaDocument.cs" />
+    <Compile Include="Document\Excel\Iase\DtoIaseTabelaOgleDocument.cs" />
+    <Compile Include="Document\Excel\Iase\DtoIaseTabelaOgunDocumet.cs" />
+    <Compile Include="Document\Excel\MuayeneKabul\DtoMuayeneKabulListeDocument.cs" />
+    <Compile Include="Document\Excel\MuayeneKabul\MuayeneKabulDocumentCreate.cs" />
+    <Compile Include="Document\Excel\SarfCikis\DtoSarfCikisListeDocument.cs" />
+    <Compile Include="Document\Excel\SarfCikis\SarfCikisListeDocumentCreate.cs" />
+    <Compile Include="Document\Excel\YemekTabelasi\DtoTabelaDocument.cs" />
+    <Compile Include="Document\Excel\Iase\IaseTabelaDocumentCreate.cs" />
+    <Compile Include="Document\Excel\YemekTabelasi\TabelaDocumentCreate.cs" />
+    <Compile Include="List\AlimTurCombobox.cs" />
+    <Compile Include="List\UrunGrubuCombobox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DOGAN.AmbarStokTakip.Business\DOGAN.AmbarStokTakip.Business.csproj">
+      <Project>{4D114B58-0ACA-44C6-A2C3-D41EF395ECAD}</Project>
+      <Name>DOGAN.AmbarStokTakip.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DOGAN.AmbarStokTakip.Core\DOGAN.AmbarStokTakip.Core.csproj">
+      <Project>{F21CCB6A-C273-4871-8751-B56BA869B3BF}</Project>
+      <Name>DOGAN.AmbarStokTakip.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

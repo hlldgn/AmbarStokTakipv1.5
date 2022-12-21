@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D114B58-0ACA-44C6-A2C3-D41EF395ECAD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DOGAN.AmbarStokTakip.Business</RootNamespace>
+    <AssemblyName>DOGAN.AmbarStokTakip.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=6.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.6.3.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\Base\IBaseService.cs" />
+    <Compile Include="Abstract\IAlimService.cs" />
+    <Compile Include="Abstract\IAlimUrunService.cs" />
+    <Compile Include="Abstract\IBirimService.cs" />
+    <Compile Include="Abstract\ICikisIaseService.cs" />
+    <Compile Include="Abstract\ICikisIaseTabelaService.cs" />
+    <Compile Include="Abstract\ICikisSarfService.cs" />
+    <Compile Include="Abstract\IDepoService.cs" />
+    <Compile Include="Abstract\IFaturaService.cs" />
+    <Compile Include="Abstract\IOdemeService.cs" />
+    <Compile Include="Abstract\IOtomatikCikisService.cs" />
+    <Compile Include="Abstract\IPersonelService.cs" />
+    <Compile Include="Abstract\ITabelaService.cs" />
+    <Compile Include="Abstract\ITelefonRehberService.cs" />
+    <Compile Include="Abstract\IUrunKayitService.cs" />
+    <Compile Include="Abstract\IUrunService.cs" />
+    <Compile Include="Abstract\IYemekService.cs" />
+    <Compile Include="Concrete\AlimManager.cs" />
+    <Compile Include="Concrete\AlimUrunManager.cs" />
+    <Compile Include="Concrete\BirimManager.cs" />
+    <Compile Include="Concrete\CikisIaseManager.cs" />
+    <Compile Include="Concrete\CikisIaseTabelaManager.cs" />
+    <Compile Include="Concrete\CikisSarfManager.cs" />
+    <Compile Include="Concrete\DepoManager.cs" />
+    <Compile Include="Concrete\FaturaManager.cs" />
+    <Compile Include="Concrete\OdemeManager.cs" />
+    <Compile Include="Concrete\OtomatikCikisManager.cs" />
+    <Compile Include="Concrete\PersonelManager.cs" />
+    <Compile Include="Concrete\TabelaManager.cs" />
+    <Compile Include="Concrete\TelefonRehberManager.cs" />
+    <Compile Include="Concrete\UrunKayitManager.cs" />
+    <Compile Include="Concrete\UrunManager.cs" />
+    <Compile Include="Concrete\YemekManager.cs" />
+    <Compile Include="DependencyResolvers\Autofac\AutofacBusinessModule.cs" />
+    <Compile Include="DependencyResolvers\Autofac\InstanceFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YedekleManager.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DOGAN.AmbarStokTakip.Core\DOGAN.AmbarStokTakip.Core.csproj">
+      <Project>{F21CCB6A-C273-4871-8751-B56BA869B3BF}</Project>
+      <Name>DOGAN.AmbarStokTakip.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DOGAN.AmbarStokTakip.DataaccessLayer\DOGAN.AmbarStokTakip.DataaccessLayer.csproj">
+      <Project>{5F3FAC10-7B5F-4F81-A3AE-44BB2BF1B5BB}</Project>
+      <Name>DOGAN.AmbarStokTakip.DataaccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DOGAN.AmbarStokTakip.Entities\DOGAN.AmbarStokTakip.Entities.csproj">
+      <Project>{A486E05F-F562-4921-9FD8-398B0DCBCBF6}</Project>
+      <Name>DOGAN.AmbarStokTakip.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
